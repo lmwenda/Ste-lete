@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/dist/output.css" rel="stylesheet">
         <title>Steílete</title>
+        <link rel="icon" href="/src/assets/favicon-32x32.png" />
     </head>
     <body>
         <!-- Header -->
@@ -15,6 +16,17 @@
                     <img src="/src/assets/favicon-32x32.png" alt="" />
                     <h1 class="hidden md:flex text-2xl">Steílete</h1>
                 </div>
+
+                <!-- Hamburger Icon -->
+
+                <button
+                    id="menu-btn"
+                    class="block hamburger md:hidden focus:outline-none"
+                >
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
 
                 <!-- items -->
                 <div class="hidden md:flex space-x-4 items-center">
@@ -44,13 +56,30 @@
                 </div>
 
             </div>
+            
+            
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <div
+                id="menu"
+                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+                >
+                <a href="#">Send Money</a>
+                <a href="#">Receive Money</a>
+                <a href="#">Contact us</a>
+                <a href="#">Language</a>
+                <a href="#">Login</a>
+                </div>
+            </div>
+            </div>
         </nav>
 
         <!-- Hero Part-->
 
         <section>
             <div
-                class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row"
+                class="container flex flex-col-reverse items-center px-6 mx-auto mt-1 space-y-12 md:space-y-0 md:flex-row"
             >
                 <!-- Left item -->
                 <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
@@ -77,19 +106,89 @@
             </div>
         </section>
 
-        <section class="flex flex-col items-center px-6 mt-10 space-y-0 md:space-y-0 border">
+        <!-- How it works section -->
+
+        <section class="relative py-14 flex flex-col items-center px-6 mt-10 space-y-30 md:space-y-0">
             <h1 class="text-4xl font-bold">How it works</h1>
             <p class="max-w-sm text-center text-darkGrayishBlue pt-5">Always wanted to send money but it'll take hours for it to send? 
                 Wanted to send money but the fee is expensive. 
                 All your problems will be solved here.
             </p>
+            
+            <div class="relative flex flex-col space-y-8 h-52 md:flex-row md:space-x-36 sm:flex-col">
+                <div class="flex flex-col mt-10 sm: w-30 md: w-60">
+                    <img class="sm: w-30 md:w-30" src="/src/assets/20945410.jpg" alt="" />
+                    <h3 class="text-center font-bold pt-1">In-app transfer system</h3>
+                    <h3 class="text-center pt-3">Quick and Fast Blockchain Transfer System done in seconds.</h3>
+                </div>
+                
+                <div class="flex flex-col mt-10 sm: w-30 md: w-60">
+                    <img class="sm:w-30 md:w-30" src="/src/assets/Milestones of business projects-bro.png" alt="" />
+                    <h3 class="text-center font-bold pt-1">Track Payment</h3>
+                    <h3 class="text-center pt-3">View all your transcations in a clean responsive user friendly interface</h3>
+                </div>
 
-            <div class="flex mt-32 sm: flex-col md: flex-row">
-                <div class="flex flex-col">
-                    <img class="sm: w-50 md: w-29" src="/src//assets/Milestones of business projects-bro.png" alt="" />
+                <div class="hidden md:flex flex-col space-y-3 mt-10 sm: w-30 md: w-60 sm:mb-32">
+                    <img class="w-30 rounded-full md:w-30" src="/src//assets/37250.jpg" alt="" />
+                    <h3 class="text-center font-bold pt-1">Fully Secure</h3>
+                    <h3 class="text-center pt-3">Secured hashed transcations which is fully authenticated and safe.</h3>
                 </div>
             </div>
 
         </section>
+
+        <section class="mt-10"></section>
+
+        <!-- Currency Check Section -->
+        <section class="container py-14 sm:space-y-30 mt-96 px-6 justify-center z-0 mx-auto flex flex-col items-center md:mt-60 sm:space-y-5 md:space-x-5 md:flex-row">
+            <div class="md:w-1/2 space-y-12">
+                <img 
+                    class="sm:w-auto md:w-9/12" 
+                    src="/src/assets/37248.jpg"
+                    alt="" 
+                />
+            </div>
+
+            <div class="">
+                <h1 class="font-bold text-center text-4xl md:text-left">Real-time Currency Balance check</h1>
+                <p class="text-center text-darkGrayishBlue pt-3 md:text-left">
+                    Check you balance without waiting for any delays your balance updates instantly!
+                </p>
+                <p class="pt-15 text-center cursor:pointer items-center text-green-600 hover:opacity-75 md:text-left " href="#">Send money now ></p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-green-600">
+            <div
+            class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+            >
+            <div
+                class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+            >
+                <div class="mx-auto my-6 text-center text-white md:hidden">
+                Copyright &copy; 2022, All Rights Reserved
+                </div>
+                <div class="flex items-center space-x-3">
+                <img src="/src/assets/favicon-32x32.png" class="h-8" alt="" />
+                <p class="text-white">Steílete</p>
+                </div>
+            </div>
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-col space-y-3 text-white">
+                <a href="#" class="hover:text-brightRed">Home</a>
+                <a href="#" class="hover:text-brightRed">Send Money</a>
+                <a href="#" class="hover:text-brightRed">Receive Money</a>
+                <a href="#" class="hover:text-brightRed">Language</a>
+                </div>
+                <div class="flex flex-col space-y-3 text-white">
+                <a href="#" class="hover:text-brightRed">Login</a>
+                <a href="#" class="hover:text-brightRed">Register</a>
+                <a href="#" class="hover:text-brightRed">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/src/script.js"></script>
     </body>
 </html>
